@@ -10,6 +10,7 @@ import checkIcon from "@/public/assets/imgs/Check403.png";
 import FirstIcon from "@/public/assets/imgs/FirstIcon.png";
 import Cli403Icon from "@/public/assets/imgs/cli403.png";
 import py403Icon from "@/public/assets/imgs/py403.png";
+import rs403Icon from "@/public/assets/imgs/rs403.png";
 import ArrowTopLeft from "@/shared/icons/ArrowTopLeft";
 
 import { Fragment } from "react";
@@ -133,6 +134,30 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col md:flex-row justify-center">
+                <Link
+                  href="https://github.com/403unlocker/best403unlocker-rs"
+                  target="_blank">
+                  <div className="relative bg-teal-400 rounded shadow-lg m-auto my-2 md:m-5 transition transform hover:-translate-y-3 text-center py-10 w-[300px] md:w-[400px]">
+                    <ArrowTopLeft className="text-[#101010] size-6 absolute top-4 left-4" />
+
+                    <Image
+                      src={rs403Icon}
+                      alt="best403unlocker-rs"
+                      className="m-auto mb-4"
+                    />
+                    <div className="text-[#101010] px-6 space-y-1">
+                      <h3 className="font-medium text-2xl">
+                        best403unlocker-rs
+                      </h3>
+                      <p className="leading-7">
+                        اگر هنگام دانلود پکیج‌ها با تحریم مواجه شدید، می‌توانید
+                        با تغییر DNS بخشی از این محدودیت‌ها را دور بزنید. این
+                        ابزار برای ویندوز در دسترس است.
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+
                 <Link
                   href="https://github.com/403unlocker/403unlocker-cli"
                   target="_blank">
