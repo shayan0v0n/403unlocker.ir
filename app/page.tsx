@@ -8,7 +8,8 @@ import FastDocker403 from "@/public/assets/imgs/FastDocker403.jpg";
 import RocketIcon from "@/public/assets/imgs/RocketIcon.png";
 import checkIcon from "@/public/assets/imgs/Check403.png";
 import FirstIcon from "@/public/assets/imgs/FirstIcon.png";
-import ganjeLogo from "@/public/assets/imgs/sponsor-ganje.webp";
+import Cli403Icon from "@/public/assets/imgs/cli403.png";
+import py403Icon from "@/public/assets/imgs/py403.png";
 import ArrowTopLeft from "@/shared/icons/ArrowTopLeft";
 
 import { Fragment } from "react";
@@ -40,6 +41,7 @@ const Home = () => {
                     </h2>
                   </div>
                 </div>
+
                 <div className="text-center order-1 md:order-2">
                   <Image
                     priority
@@ -124,6 +126,53 @@ const Home = () => {
                         اگر نیاز داشتید که پر سرعت‌ترین میرور رجیستری داکر رو
                         برای دانلود ایمج‌های تحریمی به راحتی و سرعت پیدا کنید
                         می‌تونید از این اسکریپت استفاده کنید.
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+
+              <div className="flex flex-col md:flex-row justify-center">
+                <Link
+                  href="https://github.com/403unlocker/403unlocker-cli"
+                  target="_blank">
+                  <div className="relative bg-teal-400 rounded shadow-lg m-auto my-2 md:m-5 transition transform hover:-translate-y-3 text-center py-10 w-[300px] md:w-[400px]">
+                    <ArrowTopLeft className="text-[#101010] size-6 absolute top-4 left-4" />
+                    <Image
+                      src={Cli403Icon}
+                      alt="403unlocker-cli"
+                      className="m-auto mb-4"
+                    />
+                    <div className="text-[#101010] px-6 space-y-1">
+                      <h3 className="font-medium text-2xl">403unlocker-cli</h3>
+                      <p className="leading-7">
+                        یک ابزار CLI همه‌کاره برای 403Unlocker شامل قابلیت‌های
+                        BestDNS، FastDocker و Check که به صورت یک پکیج کاربردی
+                        ارائه شده است.
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+
+                <Link
+                  href="https://github.com/403unlocker/best403unlocker-py"
+                  target="_blank">
+                  <div className="relative bg-teal-400 rounded shadow-lg m-auto my-2 md:m-5 transition transform hover:-translate-y-3 text-center py-10 w-[300px] md:w-[400px]">
+                    <ArrowTopLeft className="text-[#101010] size-6 absolute top-4 left-4" />
+
+                    <Image
+                      src={py403Icon}
+                      alt="best403unlocker-py"
+                      className="m-auto mb-4"
+                    />
+                    <div className="text-[#101010] px-6 space-y-1">
+                      <h3 className="font-medium text-2xl">
+                        best403unlocker-py
+                      </h3>
+                      <p className="leading-7">
+                        اگه برای دانلود پکیج‌ها تحریم شدید، می‌تونید با تغییر
+                        DNS این مشکل رو حل کنید. این ابزار با پایتون ساخته شده و
+                        در PyPI موجوده.
                       </p>
                     </div>
                   </div>
@@ -252,13 +301,13 @@ const Home = () => {
           <div className="py-5 text-center">
             <div className="m-7">
               <p className="text-5xl text-[#2dd4bf] py-2">اسپانسرها</p>
-              <a href="https://ganje.host/go/403unlocker" target="_blanck">
+              {/* <a href="https://ganje.host/go/403unlocker" target="_blanck">
                 <Image
                   src={ganjeLogo}
                   alt="ganjeLogo"
                   className="m-auto rounded-lg w-[30rem]"
                 />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
