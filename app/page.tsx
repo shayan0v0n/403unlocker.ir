@@ -300,14 +300,16 @@ const Home = () => {
           id="check403Unlocker">
           <div className="py-5 text-center">
             <div className="m-7">
-              <p className="text-5xl text-[#2dd4bf] py-2">اسپانسرها</p>
-              {/* <a href="https://ganje.host/go/403unlocker" target="_blanck">
-                <Image
-                  src={ganjeLogo}
-                  alt="ganjeLogo"
-                  className="m-auto rounded-lg w-[30rem]"
-                />
-              </a> */}
+              <p className="text-5xl text-[#2dd4bf] py-2">Our Sponsors</p>
+              <a
+                href="https://github.com/SinaAboutalebi"
+                target="_blank"
+                rel="noopener noreferrer">
+                <p className="my-3 text-2xl">
+                  Proudly supported by{" "}
+                  <span className="font-bold underline">Sina Aboutalebi</span>
+                </p>
+              </a>
             </div>
           </div>
         </div>
