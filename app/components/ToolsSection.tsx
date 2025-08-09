@@ -1,13 +1,5 @@
-import ArrowTopLeft from "@/shared/icons/ArrowTopLeft";
-import Image from "next/image";
-import Link from "next/link";
-import RocketIcon from "@/public/assets/imgs/RocketIcon.png";
-import checkIcon from "@/public/assets/imgs/Check403.png";
-import FirstIcon from "@/public/assets/imgs/FirstIcon.png";
-import Cli403Icon from "@/public/assets/imgs/cli403.png";
-import py403Icon from "@/public/assets/imgs/py403.png";
-import rs403Icon from "@/public/assets/imgs/rs403.png";
 import ToolItem from "./ToolItem";
+import { CodeIcon, NetworkIcon, PackageIcon, SearchIcon, ShipIcon, TerminalIcon, ZapIcon } from "lucide-react";
 
 const tools = [
   {
@@ -16,7 +8,7 @@ const tools = [
     description:
       "ابزار قدرتمند تست DNS و شبکه برای انتخاب بهترین تنظیمات شبکه. تست سرعت دانلود و رجیستری‌های داکر.",
     tags: ["DNS Testing", "Speed Test", "Docker"],
-    icon: <Image src={checkIcon} alt="check403unlocker" />,
+    icon: <NetworkIcon className="w-8 h-8 text-white" />,
     isSpecial: true,
   },
   {
@@ -25,7 +17,7 @@ const tools = [
     description:
       "اگه نمیدونی وبسایتی که تو مرورگرت بازه رو با چه DNS میتونی بازش کنی کافیه این extension رو توی مرورگرت داشته باشی.",
     tags: ["DNS Testing", "Speed Test", "Docker"],
-    icon: <Image src={checkIcon} alt="check403unlocker" />,
+    icon: <SearchIcon className="w-8 h-8 text-white" />,
     isSpecial: false,
   },
   {
@@ -34,7 +26,7 @@ const tools = [
     description:
       "اگر شما هم برای دانلود و نصب یه سری از پکیج‌ها در سرورهاتون با تحریم روبرو شدید، می‌تونید با تغییر DNS بخشی از این تحریم‌ها رو دور بزنید.",
     tags: ["DNS Testing", "Speed Test", "Docker"],
-    icon: <Image src={checkIcon} alt="check403unlocker" />,
+    icon: <ZapIcon className="w-8 h-8 text-white" />,
     isSpecial: false,
   },
   {
@@ -43,7 +35,7 @@ const tools = [
     description:
       "اگر نیاز داشتید که پر سرعت‌ترین میرور رجیستری داکر رو برای دانلود ایمج‌های تحریمی به راحتی و سرعت پیدا کنید می‌تونید از این اسکریپت استفاده کنید.",
     tags: ["DNS Testing", "Speed Test", "Docker"],
-    icon: <Image src={checkIcon} alt="check403unlocker" />,
+    icon: <ShipIcon className="w-8 h-8 text-white" />,
     isSpecial: false,
   },
   {
@@ -52,7 +44,7 @@ const tools = [
     description:
       "اگر هنگام دانلود پکیج‌ها با تحریم مواجه شدید، می‌توانید با تغییر DNS بخشی از این محدودیت‌ها را دور بزنید. این ابزار برای ویندوز در دسترس است.",
     tags: ["DNS Testing", "Speed Test", "Docker"],
-    icon: <Image src={checkIcon} alt="check403unlocker" />,
+    icon: <CodeIcon className="w-8 h-8 text-white" />,
     isSpecial: false,
   },
   {
@@ -61,7 +53,7 @@ const tools = [
     description:
       "یک ابزار CLI همه‌کاره برای 403Unlocker شامل قابلیت‌های BestDNS، FastDocker و Check که به صورت یک پکیج کاربردی ارائه شده است.",
     tags: ["DNS Testing", "Speed Test", "Docker"],
-    icon: <Image src={checkIcon} alt="check403unlocker" />,
+    icon: <TerminalIcon className="w-8 h-8 text-white" />,
     isSpecial: false,
   },
   {
@@ -70,7 +62,7 @@ const tools = [
     description:
       "اگه برای دانلود پکیج‌ها تحریم شدید، می‌تونید با تغییر DNS این مشکل رو حل کنید. این ابزار با پایتون ساخته شده و در PyPI موجوده.",
     tags: ["DNS Testing", "Speed Test", "Docker"],
-    icon: <Image src={checkIcon} alt="check403unlocker" />,
+    icon: <PackageIcon className="w-8 h-8 text-white" />,
     isSpecial: false,
   },
 ];
