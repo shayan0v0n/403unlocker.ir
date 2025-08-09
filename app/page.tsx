@@ -18,222 +18,438 @@ import { Fragment } from "react";
 const Home = () => {
   return (
     <Fragment>
-      <a href="https://github.com/403unlocker" target="_blank">
-        <GithubIcon />
-      </a>
+      {/* Floating GitHub Link */}
+      <div className="fixed top-6 right-6 z-50">
+        <a 
+          href="https://github.com/403unlocker" 
+          target="_blank"
+          className="bg-black/20 backdrop-blur-md rounded-full p-3 hover:bg-black/40 transition-all duration-300 hover:scale-110"
+        >
+          <GithubIcon />
+        </a>
+      </div>
 
       <div className="relative overflow-hidden">
-        <div className="relative bg-black text-white overflow-hidden">
-          <div className="pt-5 text-center">
-            <div className="max-w-6xl mx-auto">
-              <div className="m-7 grid grid-cols-1 md:grid-cols-2 text-right content-center">
-                <div className="flex items-center order-2 md:order-1">
+        {/* Hero Section */}
+        <div className="relative bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden min-h-screen flex items-center">
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 to-black/50"></div>
+          
+          <div className="relative z-10 w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20">
+                <div className="space-y-8 text-center lg:text-right">
                   <div className="space-y-4">
-                    <h1 className="flex flex-col text-center md:text-start items-center md:flex-row pt-5 text-slate-300 font-black text-5xl gap-3">
-                      <span>403Unlocker</span>
-                      <span className="hidden md:inline-block">|</span>
-                      <span className="text-base md:max-w-[20ch] ">
-                        وقت تو با ارزشه، دور زدن تحریم رو بسپار به ابزارها
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
+                      <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+                        403Unlocker
                       </span>
                     </h1>
-                    <h2 className="text-slate-500 text-center md:text-start leading-8 md:max-w-lg text-xl font-medium">
-                      با ابزار های 403Unlocker پرسرعت ترین راه حل برای دور زدن
-                      تحریم های اینترنتی پیدا کن
-                    </h2>
-                  </div>
-                </div>
-
-                <div className="text-center order-1 md:order-2">
-                  <Image
-                    priority
-                    src={SimpleLogo}
-                    alt="home-page-image"
-                    className="w-full pl-8 max-w-sm ml-auto mr-auto md:ml-0 mb-8"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="relative bg-[#101010] text-white overflow-hidden">
-          <div className="py-12 text-center">
-            <div className="max-w-6xl mx-auto">
-              <div className="py-5">
-                <h1 className="text-teal-500 text-xl font-medium">
-                  چی کار کردیم حالا
-                </h1>
-                <h2 className="pt-2 text-slate-300 font-black text-5xl">
-                  ابزار های ما
-                </h2>
-              </div>
-              <div className="flex flex-col md:flex-row justify-center">
-                <Link
-                  href="https://github.com/403unlocker/check403unlocker-ext"
-                  target="_blank">
-                  <div className="relative bg-teal-400 rounded shadow-lg m-auto my-2 md:m-5 transition transform hover:-translate-y-3 text-center py-10 w-[300px] md:w-[400px]">
-                    <ArrowTopLeft className="text-[#101010] size-6 absolute top-4 left-4" />
-                    <Image
-                      src={checkIcon}
-                      alt="check403unlocker"
-                      className="m-auto mb-4"
-                    />
-                    <div className="text-[#101010] px-6 space-y-1">
-                      <h3 className="font-medium text-2xl">check403unlocker</h3>
-                      <p className="leading-7">
-                        اگه نمیدونی وبسایتی که تو مرورگرت بازه رو با چه DNS
-                        میتونی بازش کنی کافیه این extension رو توی مرورگرت داشته
-                        باشی و DNS مورد نظر رو پیدا کنی.
-                      </p>
+                    <div className="flex items-center justify-center lg:justify-start gap-3 text-lg md:text-xl text-gray-300">
+                      <div className="w-8 h-px bg-teal-400"></div>
+                      <span>وقت تو با ارزشه، دور زدن تحریم رو بسپار به ابزارها</span>
                     </div>
                   </div>
-                </Link>
-                <Link
-                  href="https://github.com/403unlocker/best403unlocker"
-                  target="_blank">
-                  <div className="relative bg-teal-400 rounded shadow-lg m-auto my-2 md:m-5 transition transform hover:-translate-y-3 text-center py-10 w-[300px] md:w-[400px]">
-                    <ArrowTopLeft className="text-[#101010] size-6 absolute top-4 left-4" />
-
-                    <Image
-                      src={FirstIcon}
-                      alt="best403unlocker"
-                      className="m-auto mb-4"
-                    />
-                    <div className="text-[#101010] px-6 space-y-1">
-                      <h3 className="font-medium text-2xl">best403unlocker</h3>
-                      <p className="leading-7">
-                        اگر شما هم برای دانلود و نصب یه سری از پکیج‌ها در
-                        سرورهاتون با تحریم روبرو شدید، می‌تونید با تغییر DNS
-                        بخشی از این تحریم‌ها رو دور بزنید.
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-                <Link
-                  href="https://github.com/403unlocker/fastDocker403unlocker"
-                  target="_blank">
-                  <div className="relative bg-teal-400 rounded shadow-lg m-auto my-2 md:m-5 transition transform hover:-translate-y-3 text-center py-10 w-[300px] md:w-[400px]">
-                    <ArrowTopLeft className="text-[#101010] size-6 absolute top-4 left-4" />
-                    <Image
-                      src={RocketIcon}
-                      alt="fastDocker403unlocker"
-                      className="m-auto mb-4"
-                    />
-                    <div className="text-[#101010] px-6 space-y-1">
-                      <h3 className="font-medium text-2xl">
-                        fastDocker403unlocker
-                      </h3>
-                      <p className="leading-7">
-                        اگر نیاز داشتید که پر سرعت‌ترین میرور رجیستری داکر رو
-                        برای دانلود ایمج‌های تحریمی به راحتی و سرعت پیدا کنید
-                        می‌تونید از این اسکریپت استفاده کنید.
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-
-              <div className="flex flex-col md:flex-row justify-center">
-                <Link
-                  href="https://github.com/403unlocker/best403unlocker-rs"
-                  target="_blank">
-                  <div className="relative bg-teal-400 rounded shadow-lg m-auto my-2 md:m-5 transition transform hover:-translate-y-3 text-center py-10 w-[300px] md:w-[400px]">
-                    <ArrowTopLeft className="text-[#101010] size-6 absolute top-4 left-4" />
-
-                    <Image
-                      src={rs403Icon}
-                      alt="best403unlocker-rs"
-                      className="m-auto mb-4"
-                    />
-                    <div className="text-[#101010] px-6 space-y-1">
-                      <h3 className="font-medium text-2xl">
-                        best403unlocker-rs
-                      </h3>
-                      <p className="leading-7">
-                        اگر هنگام دانلود پکیج‌ها با تحریم مواجه شدید، می‌توانید
-                        با تغییر DNS بخشی از این محدودیت‌ها را دور بزنید. این
-                        ابزار برای ویندوز در دسترس است.
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-
-                <Link
-                  href="https://github.com/403unlocker/403unlocker-cli"
-                  target="_blank">
-                  <div className="relative bg-teal-400 rounded shadow-lg m-auto my-2 md:m-5 transition transform hover:-translate-y-3 text-center py-10 w-[300px] md:w-[400px]">
-                    <ArrowTopLeft className="text-[#101010] size-6 absolute top-4 left-4" />
-                    <Image
-                      src={Cli403Icon}
-                      alt="403unlocker-cli"
-                      className="m-auto mb-4"
-                    />
-                    <div className="text-[#101010] px-6 space-y-1">
-                      <h3 className="font-medium text-2xl">403unlocker-cli</h3>
-                      <p className="leading-7">
-                        یک ابزار CLI همه‌کاره برای 403Unlocker شامل قابلیت‌های
-                        BestDNS، FastDocker و Check که به صورت یک پکیج کاربردی
-                        ارائه شده است.
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-
-                <Link
-                  href="https://github.com/403unlocker/best403unlocker-py"
-                  target="_blank">
-                  <div className="relative bg-teal-400 rounded shadow-lg m-auto my-2 md:m-5 transition transform hover:-translate-y-3 text-center py-10 w-[300px] md:w-[400px]">
-                    <ArrowTopLeft className="text-[#101010] size-6 absolute top-4 left-4" />
-
-                    <Image
-                      src={py403Icon}
-                      alt="best403unlocker-py"
-                      className="m-auto mb-4"
-                    />
-                    <div className="text-[#101010] px-6 space-y-1">
-                      <h3 className="font-medium text-2xl">
-                        best403unlocker-py
-                      </h3>
-                      <p className="leading-7">
-                        اگه برای دانلود پکیج‌ها تحریم شدید، می‌تونید با تغییر
-                        DNS این مشکل رو حل کنید. این ابزار با پایتون ساخته شده و
-                        در PyPI موجوده.
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="relative bg-[#2dd4bf] text-white overflow-hidden md:h-[500px] h-auto flex items-center justify-center"
-          id="best403Unlocker">
-          <div className="py-5 text-center">
-            <div className="max-w-6xl mx-auto">
-              <div className="m-7 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="flex items-center justify-center md:justify-end order-2 md:order-1">
-                  <div className=" text-right">
-                    <Link
-                      href="https://github.com/403unlocker/best403unlocker"
-                      target="_blank">
-                      <h3 className="pt-5 text-black font-black md:text-4xl text-2xl">
-                        <span>best403Unlocker </span>
-                        <ArrowTopLeft className="size-6 mb-2 inline-block" />
-                      </h3>
+                  
+                  <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    با ابزار های 403Unlocker پرسرعت ترین راه حل برای دور زدن
+                    تحریم های اینترنتی پیدا کن
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <Link 
+                      href="#tools"
+                      className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                    >
+                      شروع کنید
                     </Link>
-                    <p className="text-gray-800 leading-9 text-xl font-medium pt-4">
-                      یه ابزار مینیمال و خیلی کاربردی برای زمانی که میخوای پر
-                      سرعت ترین dns آنتی تحریم رو برای نتورکی که داری پیدا کنی
+                    <Link 
+                      href="https://github.com/403unlocker"
+                      target="_blank"
+                      className="border border-gray-600 hover:border-teal-400 text-gray-300 hover:text-teal-400 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105"
+                    >
+                      مشاهده در GitHub
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="flex justify-center lg:justify-end">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-3xl blur-3xl"></div>
+                    <Image
+                      priority
+                      src={SimpleLogo}
+                      alt="403Unlocker Logo"
+                      className="relative z-10 w-full max-w-md rounded-3xl shadow-2xl"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Tools Section */}
+        <div id="tools" className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-black mb-6">
+                <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+                  ابزار های ما
+                </span>
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                مجموعه‌ای از ابزارهای قدرتمند برای دور زدن تحریم‌ها و بهینه‌سازی شبکه
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Bargozin - New Tool */}
+              <Link
+                href="https://github.com/Vesal-J/bargozin-desktop"
+                target="_blank"
+                className="group relative bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8 hover:border-purple-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+              >
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ArrowTopLeft className="text-purple-400 size-6" />
+                </div>
+                
+                <div className="text-center space-y-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl font-bold text-white">ب</span>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                      Bargozin (برگُزین)
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      ابزار قدرتمند تست DNS و شبکه برای انتخاب بهترین تنظیمات شبکه. تست سرعت دانلود و رجیستری‌های داکر.
+                    </p>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">DNS Testing</span>
+                    <span className="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">Speed Test</span>
+                    <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Docker</span>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Existing Tools */}
+              <Link
+                href="https://github.com/403unlocker/check403unlocker-ext"
+                target="_blank"
+                className="group relative bg-gradient-to-br from-teal-500/10 to-cyan-500/10 backdrop-blur-sm border border-teal-500/20 rounded-2xl p-8 hover:border-teal-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+              >
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ArrowTopLeft className="text-teal-400 size-6" />
+                </div>
+                
+                <div className="text-center space-y-6">
+                  <Image
+                    src={checkIcon}
+                    alt="check403unlocker"
+                    className="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300"
+                  />
+                  
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-teal-300 transition-colors">
+                      check403unlocker
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      اگه نمیدونی وبسایتی که تو مرورگرت بازه رو با چه DNS میتونی بازش کنی کافیه این extension رو توی مرورگرت داشته باشی.
                     </p>
                   </div>
                 </div>
-                <div className="text-center order-1 md:order-2">
+              </Link>
+
+              <Link
+                href="https://github.com/403unlocker/best403unlocker"
+                target="_blank"
+                className="group relative bg-gradient-to-br from-teal-500/10 to-cyan-500/10 backdrop-blur-sm border border-teal-500/20 rounded-2xl p-8 hover:border-teal-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+              >
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ArrowTopLeft className="text-teal-400 size-6" />
+                </div>
+                
+                <div className="text-center space-y-6">
+                  <Image
+                    src={FirstIcon}
+                    alt="best403unlocker"
+                    className="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300"
+                  />
+                  
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-teal-300 transition-colors">
+                      best403unlocker
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      اگر شما هم برای دانلود و نصب یه سری از پکیج‌ها در سرورهاتون با تحریم روبرو شدید، می‌تونید با تغییر DNS بخشی از این تحریم‌ها رو دور بزنید.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+
+              <Link
+                href="https://github.com/403unlocker/fastDocker403unlocker"
+                target="_blank"
+                className="group relative bg-gradient-to-br from-teal-500/10 to-cyan-500/10 backdrop-blur-sm border border-teal-500/20 rounded-2xl p-8 hover:border-teal-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+              >
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ArrowTopLeft className="text-teal-400 size-6" />
+                </div>
+                
+                <div className="text-center space-y-6">
+                  <Image
+                    src={RocketIcon}
+                    alt="fastDocker403unlocker"
+                    className="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300"
+                  />
+                  
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-teal-300 transition-colors">
+                      fastDocker403unlocker
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      اگر نیاز داشتید که پر سرعت‌ترین میرور رجیستری داکر رو برای دانلود ایمج‌های تحریمی به راحتی و سرعت پیدا کنید می‌تونید از این اسکریپت استفاده کنید.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+
+              <Link
+                href="https://github.com/403unlocker/best403unlocker-rs"
+                target="_blank"
+                className="group relative bg-gradient-to-br from-teal-500/10 to-cyan-500/10 backdrop-blur-sm border border-teal-500/20 rounded-2xl p-8 hover:border-teal-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+              >
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ArrowTopLeft className="text-teal-400 size-6" />
+                </div>
+                
+                <div className="text-center space-y-6">
+                  <Image
+                    src={rs403Icon}
+                    alt="best403unlocker-rs"
+                    className="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300"
+                  />
+                  
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-teal-300 transition-colors">
+                      best403unlocker-rs
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      اگر هنگام دانلود پکیج‌ها با تحریم مواجه شدید، می‌توانید با تغییر DNS بخشی از این محدودیت‌ها را دور بزنید. این ابزار برای ویندوز در دسترس است.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+
+              <Link
+                href="https://github.com/403unlocker/403unlocker-cli"
+                target="_blank"
+                className="group relative bg-gradient-to-br from-teal-500/10 to-cyan-500/10 backdrop-blur-sm border border-teal-500/20 rounded-2xl p-8 hover:border-teal-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+              >
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ArrowTopLeft className="text-teal-400 size-6" />
+                </div>
+                
+                <div className="text-center space-y-6">
+                  <Image
+                    src={Cli403Icon}
+                    alt="403unlocker-cli"
+                    className="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300"
+                  />
+                  
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-teal-300 transition-colors">
+                      403unlocker-cli
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      یک ابزار CLI همه‌کاره برای 403Unlocker شامل قابلیت‌های BestDNS، FastDocker و Check که به صورت یک پکیج کاربردی ارائه شده است.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+
+              <Link
+                href="https://github.com/403unlocker/best403unlocker-py"
+                target="_blank"
+                className="group relative bg-gradient-to-br from-teal-500/10 to-cyan-500/10 backdrop-blur-sm border border-teal-500/20 rounded-2xl p-8 hover:border-teal-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+              >
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ArrowTopLeft className="text-teal-400 size-6" />
+                </div>
+                
+                <div className="text-center space-y-6">
+                  <Image
+                    src={py403Icon}
+                    alt="best403unlocker-py"
+                    className="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300"
+                  />
+                  
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-teal-300 transition-colors">
+                      best403unlocker-py
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      اگه برای دانلود پکیج‌ها تحریم شدید، می‌تونید با تغییر DNS این مشکل رو حل کنید. این ابزار با پایتون ساخته شده و در PyPI موجوده.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Bargozin Feature Section */}
+        <div className="relative bg-gradient-to-br from-purple-900 via-black to-pink-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-pink-900/30"></div>
+          
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-3 px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm">
+                    <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></span>
+                    ابزار جدید
+                  </div>
+                  
+                  <h2 className="text-4xl md:text-5xl font-black leading-tight">
+                    <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      Bargozin (برگُزین)
+                    </span>
+                  </h2>
+                  
+                  <p className="text-xl text-gray-300 leading-relaxed">
+                    ابزار قدرتمند تست DNS و شبکه برای انتخاب بهترین تنظیمات شبکه
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold">🌐</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-2">تست DNS Server</h3>
+                      <p className="text-gray-400">تست دسترسی URL در 26+ DNS server مختلف</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold">📊</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-2">تحلیل سرعت دانلود</h3>
+                      <p className="text-gray-400">اندازه‌گیری عملکرد دانلود با تنظیمات DNS مختلف</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold">🐳</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-2">تست Docker Registry</h3>
+                      <p className="text-gray-400">ارزیابی سرعت رجیستری‌های داکر برای بهینه‌سازی workflow</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link 
+                    href="https://github.com/Vesal-J/bargozin-desktop"
+                    target="_blank"
+                    className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl text-center"
+                  >
+                    دانلود Bargozin
+                  </Link>
+                  <Link 
+                    href="https://github.com/Vesal-J/bargozin-desktop"
+                    target="_blank"
+                    className="border border-purple-500/30 hover:border-purple-400 text-purple-300 hover:text-purple-200 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 text-center"
+                  >
+                    مشاهده در GitHub
+                  </Link>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl blur-3xl"></div>
+                <div className="relative bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-purple-500/20 rounded-3xl p-8">
+                  <div className="space-y-6">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-xl font-bold text-white">ویژگی‌های کلیدی</h3>
+                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                        <span className="text-gray-300">Cross-platform (Windows, macOS, Linux)</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                        <span className="text-gray-300">رابط کاربری فارسی با پشتیبانی RTL</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                        <span className="text-gray-300">نتایج real-time با تست همزمان</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                        <span className="text-gray-300">مدیریت session و لغو تست</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Best403Unlocker Section */}
+        <div className="relative bg-gradient-to-br from-teal-500 to-cyan-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8 order-2 lg:order-1">
+                <div className="space-y-4">
+                  <Link
+                    href="https://github.com/403unlocker/best403unlocker"
+                    target="_blank"
+                    className="inline-flex items-center gap-2 text-black hover:text-gray-800 transition-colors"
+                  >
+                    <h3 className="text-4xl md:text-5xl font-black">
+                      best403Unlocker
+                    </h3>
+                    <ArrowTopLeft className="size-8" />
+                  </Link>
+                  
+                  <p className="text-xl text-gray-800 leading-relaxed">
+                    یه ابزار مینیمال و خیلی کاربردی برای زمانی که میخوای پر
+                    سرعت ترین dns آنتی تحریم رو برای نتورکی که داری پیدا کنی
+                  </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link 
+                    href="https://github.com/403unlocker/best403unlocker"
+                    target="_blank"
+                    className="bg-black/20 backdrop-blur-sm border border-black/30 hover:border-black/50 text-black px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 text-center"
+                  >
+                    مشاهده پروژه
+                  </Link>
+                </div>
+              </div>
+
+              <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-black/20 rounded-3xl blur-3xl"></div>
                   <Image
                     src={Best403}
                     alt="best403unlocker"
-                    className="m-auto rounded-lg"
+                    className="relative z-10 rounded-3xl shadow-2xl"
                   />
                 </div>
               </div>
@@ -241,78 +457,108 @@ const Home = () => {
           </div>
         </div>
 
-        <div
-          className="relative bg-black text-white overflow-hidden md:h-[500px] h-auto flex items-center justify-center"
-          id="check403Unlocker">
-          <div className="py-5 text-center">
-            <div className="max-w-6xl mx-auto">
-              <div className="m-7 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="text-center">
+        {/* FastDocker Section */}
+        <div className="relative bg-gradient-to-br from-black via-gray-900 to-black text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="flex justify-center lg:justify-start">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-teal-500/20 rounded-3xl blur-3xl"></div>
                   <Image
                     src={FastDocker403}
                     alt="fastDocker403unlocker"
-                    className="m-auto rounded-lg"
+                    className="relative z-10 rounded-3xl shadow-2xl"
                   />
                 </div>
-                <div className="flex items-center justify-center md:justify-end">
-                  <div className="text-right">
-                    <Link
-                      href="https://github.com/403unlocker/fastDocker403unlocker"
-                      target="_blank">
-                      <h3 className="pt-5 text-[#2dd4bf] font-black md:text-4xl text-2xl">
-                        <span>fastDocker403unlocker </span>
-                        <ArrowTopLeft className="size-6 mb-2 inline-block" />
-                      </h3>
-                    </Link>
-                    <p className="text-gray-300 leading-9 text-xl font-medium pt-4">
-                      یه ابزار بدرد بخور برای کسایی که با داکر یا کوبرنتیز سر و
-                      کله میزنن و به خاطر تحریم های انلاین دانلود ایمیج های داکر
-                      براشون عذابه...
-                    </p>
-                  </div>
+              </div>
+
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <Link
+                    href="https://github.com/403unlocker/fastDocker403unlocker"
+                    target="_blank"
+                    className="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors"
+                  >
+                    <h3 className="text-4xl md:text-5xl font-black">
+                      fastDocker403unlocker
+                    </h3>
+                    <ArrowTopLeft className="size-8" />
+                  </Link>
+                  
+                  <p className="text-xl text-gray-300 leading-relaxed">
+                    یه ابزار بدرد بخور برای کسایی که با داکر یا کوبرنتیز سر و
+                    کله میزنن و به خاطر تحریم های انلاین دانلود ایمیج های داکر
+                    براشون عذابه...
+                  </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link 
+                    href="https://github.com/403unlocker/fastDocker403unlocker"
+                    target="_blank"
+                    className="bg-teal-500/20 backdrop-blur-sm border border-teal-500/30 hover:border-teal-500/50 text-teal-300 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 text-center"
+                  >
+                    مشاهده پروژه
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div
-          className="relative bg-[#2dd4bf] text-white overflow-hidden h-auto flex items-center justify-center"
-          id="check403unlocker">
-          <div className="py-5 text-center">
-            <div className="max-w-6xl mx-auto">
-              <div className="m-7 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="flex items-center justify-center md:justify-end order-2 md:order-1">
-                  <div className=" text-right">
-                    <Link href="https://github.com/403unlocker/check403unlocker-ext">
-                      <h3 className="pt-5 text-black font-black md:text-4xl text-2xl">
-                        <span>check403unlocker </span>
-                        <ArrowTopLeft className="size-6 mb-2 inline-block" />
-                      </h3>
-                    </Link>
-                    <p className="text-gray-800 leading-9 text-xl font-medium pt-4">
-                      فقط کافیه extension و سایت تحریمی مورد نظرت رو باز کنی تا
-                      بهت بگه کدوم DNS میتونه تحریم این سایت رو دور بزنه
-                    </p>
-                    <p className="text-gray-800 leading-9 text-xl font-medium pt-4">
-                      برای دانلود روی{" "}
-                      <Link
-                        href={
-                          "https://chromewebstore.google.com/detail/check403unlocker/elmlgegphdbjnofpobhkinmjnofkdmne"
-                        }
-                        target="_blank"
-                        className="text-blue-500">
-                        لینک
-                      </Link>{" "}
-                      کلیک کن
-                    </p>
-                  </div>
+        {/* Check403Unlocker Section */}
+        <div className="relative bg-gradient-to-br from-teal-500 to-cyan-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8 order-2 lg:order-1">
+                <div className="space-y-4">
+                  <Link
+                    href="https://github.com/403unlocker/check403unlocker-ext"
+                    target="_blank"
+                    className="inline-flex items-center gap-2 text-black hover:text-gray-800 transition-colors"
+                  >
+                    <h3 className="text-4xl md:text-5xl font-black">
+                      check403unlocker
+                    </h3>
+                    <ArrowTopLeft className="size-8" />
+                  </Link>
+                  
+                  <p className="text-xl text-gray-800 leading-relaxed">
+                    فقط کافیه extension و سایت تحریمی مورد نظرت رو باز کنی تا
+                    بهت بگه کدوم DNS میتونه تحریم این سایت رو دور بزنه
+                  </p>
+                  
+                  <p className="text-lg text-gray-800">
+                    برای دانلود روی{" "}
+                    <Link
+                      href="https://chromewebstore.google.com/detail/check403unlocker/elmlgegphdbjnofpobhkinmjnofkdmne"
+                      target="_blank"
+                      className="text-blue-600 hover:text-blue-700 underline font-medium"
+                    >
+                      لینک
+                    </Link>{" "}
+                    کلیک کن
+                  </p>
                 </div>
-                <div className="text-center order-1 md:order-2">
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link 
+                    href="https://chromewebstore.google.com/detail/check403unlocker/elmlgegphdbjnofpobhkinmjnofkdmne"
+                    target="_blank"
+                    className="bg-black/20 backdrop-blur-sm border border-black/30 hover:border-black/50 text-black px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 text-center"
+                  >
+                    دانلود Extension
+                  </Link>
+                </div>
+              </div>
+
+              <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-black/20 rounded-3xl blur-3xl"></div>
                   <Image
                     src={Check403Desk}
                     alt="check403unlocker"
-                    className="m-auto rounded-lg"
+                    className="relative z-10 rounded-3xl shadow-2xl"
                   />
                 </div>
               </div>
@@ -320,21 +566,31 @@ const Home = () => {
           </div>
         </div>
 
-        <div
-          className="relative bg-black text-white overflow-hidden h-auto flex items-center justify-center"
-          id="check403Unlocker">
-          <div className="py-5 text-center">
-            <div className="m-7">
-              <p className="text-5xl text-[#2dd4bf] py-2">Our Sponsors</p>
-              <a
-                href="https://github.com/SinaAboutalebi"
-                target="_blank"
-                rel="noopener noreferrer">
-                <p className="my-3 text-2xl">
-                  Proudly supported by{" "}
-                  <span className="font-bold underline">Sina Aboutalebi</span>
-                </p>
-              </a>
+        {/* Sponsors Section */}
+        <div className="relative bg-gradient-to-br from-black via-gray-900 to-black text-white py-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="space-y-8">
+              <h2 className="text-4xl md:text-5xl font-black">
+                <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+                  Our Sponsors
+                </span>
+              </h2>
+              
+              <div className="bg-gradient-to-br from-teal-500/10 to-cyan-500/10 backdrop-blur-sm border border-teal-500/20 rounded-3xl p-8">
+                <a
+                  href="https://github.com/SinaAboutalebi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block"
+                >
+                  <p className="text-2xl text-gray-300 group-hover:text-white transition-colors">
+                    Proudly supported by{" "}
+                    <span className="font-bold text-teal-400 group-hover:text-teal-300 underline">
+                      Sina Aboutalebi
+                    </span>
+                  </p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
