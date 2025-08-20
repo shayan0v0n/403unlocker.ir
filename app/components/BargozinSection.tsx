@@ -72,13 +72,13 @@ export default function BargozinSection() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="https://github.com/Vesal-J/bargozin-desktop"
+                href="https://github.com/403unlocker/bargozin-desktop/releases"
                 target="_blank"
                 className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl text-center">
                 دانلود Bargozin
               </Link>
               <Link
-                href="https://github.com/Vesal-J/bargozin-desktop"
+                href="https://github.com/403unlocker/bargozin-desktop"
                 target="_blank"
                 className="border border-purple-500/30 hover:border-purple-400 text-purple-300 hover:text-purple-200 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 text-center">
                 مشاهده در GitHub
