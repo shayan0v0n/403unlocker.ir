@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import SimpleLogo from "@/public/assets/imgs/logo.jpg";
+import SimpleLogo from "@/public/assets/imgs/logo.png";
 
 export default function HeroSection() {
   return (
