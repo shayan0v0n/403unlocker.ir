@@ -1,5 +1,13 @@
 import ToolItem from "./ToolItem";
-import { CodeIcon, NetworkIcon, PackageIcon, SearchIcon, ShipIcon, TerminalIcon, ZapIcon } from "lucide-react";
+import {
+  CodeIcon,
+  NetworkIcon,
+  PackageIcon,
+  SearchIcon,
+  ShipIcon,
+  TerminalIcon,
+  ZapIcon,
+} from "lucide-react";
 
 const tools = [
   {
@@ -20,24 +28,24 @@ const tools = [
     icon: <SearchIcon className="w-8 h-8 text-white" />,
     isSpecial: false,
   },
-  {
-    href: "https://github.com/403unlocker/best403unlocker",
-    title: "best403unlocker",
-    description:
-      "اگر شما هم برای دانلود و نصب یه سری از پکیج‌ها در سرورهاتون با تحریم روبرو شدید، می‌تونید با تغییر DNS بخشی از این تحریم‌ها رو دور بزنید.",
-    tags: ["DNS Optimization", "Package Download", "Server Tools"],
-    icon: <ZapIcon className="w-8 h-8 text-white" />,
-    isSpecial: false,
-  },
-  {
-    href: "https://github.com/403unlocker/fastDocker403unlocker",
-    title: "fastDocker403unlocker",
-    description:
-      "اگر نیاز داشتید که پر سرعت‌ترین میرور رجیستری داکر رو برای دانلود ایمج‌های تحریمی به راحتی و سرعت پیدا کنید می‌تونید از این اسکریپت استفاده کنید.",
-    tags: ["Docker Registry", "Image Download", "Mirror Finder"],
-    icon: <ShipIcon className="w-8 h-8 text-white" />,
-    isSpecial: false,
-  },
+  // {
+  //   href: "https://github.com/403unlocker/best403unlocker",
+  //   title: "best403unlocker",
+  //   description:
+  //     "اگر شما هم برای دانلود و نصب یه سری از پکیج‌ها در سرورهاتون با تحریم روبرو شدید، می‌تونید با تغییر DNS بخشی از این تحریم‌ها رو دور بزنید.",
+  //   tags: ["DNS Optimization", "Package Download", "Server Tools"],
+  //   icon: <ZapIcon className="w-8 h-8 text-white" />,
+  //   isSpecial: false,
+  // },
+  // {
+  //   href: "https://github.com/403unlocker/fastDocker403unlocker",
+  //   title: "fastDocker403unlocker",
+  //   description:
+  //     "اگر نیاز داشتید که پر سرعت‌ترین میرور رجیستری داکر رو برای دانلود ایمج‌های تحریمی به راحتی و سرعت پیدا کنید می‌تونید از این اسکریپت استفاده کنید.",
+  //   tags: ["Docker Registry", "Image Download", "Mirror Finder"],
+  //   icon: <ShipIcon className="w-8 h-8 text-white" />,
+  //   isSpecial: false,
+  // },
   {
     href: "https://github.com/403unlocker/best403unlocker-rs",
     title: "best403unlocker-rs",
